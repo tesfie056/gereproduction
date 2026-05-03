@@ -1,7 +1,9 @@
 /**
- * Replace image src values with your own files under /public/projects/.
- * Add or remove entries to change what appears in the Projects slider.
+ * Projects slider (and hero) — recent photos first, then before/after composites.
+ * Per-photo files live under /public/projects/.
  */
+import { recentKitchenPhotos } from "@/lib/recent-kitchen-photos";
+
 export type GalleryImageSlide = {
   type: "image";
   src: string;
@@ -18,7 +20,7 @@ export type GalleryVideoSlide = {
 
 export type GallerySlide = GalleryImageSlide | GalleryVideoSlide;
 
-export const gallerySlides: GallerySlide[] = [
+const beforeAfterProjectSlides: GallerySlide[] = [
   {
     type: "image",
     src: "/projects/kitchen-before-after.png",
@@ -40,6 +42,14 @@ export const gallerySlides: GallerySlide[] = [
     alt: "Before and after — dated kitchen remodeled into a bright space with white shaker cabinets, island, and brass lighting",
   },
 ];
+
+/** Single ordered list for hero + Projects section */
+export const allProjectSlides: GallerySlide[] = [
+  ...recentKitchenPhotos,
+  ...beforeAfterProjectSlides,
+];
+
+export const gallerySlides: GallerySlide[] = allProjectSlides;
 
 /*
  * When you have a walkthrough video, append one of these to `gallerySlides`:

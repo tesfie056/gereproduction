@@ -30,7 +30,7 @@ export function ContactForm() {
           <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-[#5c534a]">
             Phone
           </label>
-          <input id="phone" name="phone" type="tel" autoComplete="tel" className={field} placeholder="(215) 555-0100" />
+          <input id="phone" name="phone" type="tel" autoComplete="tel" className={field} placeholder="(717) 623-3879" />
         </div>
       </div>
       <div>
