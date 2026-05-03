@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Placeholder project photo 2">
+  <defs>
+    <linearGradient id="g2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#262626"/>
+      <stop offset="100%" stop-color="#525252"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g2)"/>
+  <rect x="80" y="120" width="320" height="440" fill="#f97316" opacity="0.35"/>
+  <text x="600" y="320" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" text-anchor="middle">Replace: project-2</text>
+  <text x="600" y="380" fill="#e5e5e5" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">1200×675 or similar aspect ratio works well</text>
+</svg>

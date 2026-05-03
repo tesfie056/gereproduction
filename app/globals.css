@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+/* Light luxury palette — warm cream ground, charcoal type, gold (#d4af37) + secondary (#b88a2a) */
+:root {
+  --bg-page: #f7f3ea;
+  --bg-soft: #f8f5ef;
+  --bg-card: #fffefb;
+  --text-primary: #1f1b16;
+  --text-muted: #5c534a;
+  --border-soft: #e8e4dc;
+  --gold: #d4af37;
+  --gold-light: #e4c04d;
+  --gold-secondary: #b88a2a;
+  --gold-deep: #9a741f;
+  --brand-shadow: rgba(212, 175, 55, 0.28);
+
+  --surface-void: var(--bg-page);
+  --surface-deep: #eee9df;
+  --surface: var(--bg-soft);
+  --surface-card: var(--bg-card);
+  --border-warm: var(--border-soft);
+  --cream: var(--text-primary);
+  --cream-muted: var(--text-muted);
+  --muted-warm: var(--text-muted);
+  --brand-bright: var(--gold-light);
+  --brand: var(--gold);
+  --brand-mid: var(--gold-secondary);
+  --brand-deep: var(--gold-deep);
+  --brand-hover: var(--gold-secondary);
+}
+
+@theme inline {
+  --color-background: var(--bg-page);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-brand-bright: var(--gold-light);
+  --color-brand: var(--gold);
+  --color-brand-mid: var(--gold-secondary);
+  --color-brand-deep: var(--gold-deep);
+  --color-brand-hover: var(--gold-secondary);
+  --color-surface-void: var(--bg-page);
+  --color-surface-deep: var(--surface-deep);
+  --color-surface: var(--bg-soft);
+  --color-surface-card: var(--bg-card);
+  --color-border-warm: var(--border-soft);
+  --color-cream: var(--text-primary);
+  --color-cream-muted: var(--text-muted);
+  --color-muted-warm: var(--text-muted);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  background-color: var(--bg-page);
+}
+
+@keyframes gallery-fade {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-gallery-fade {
+  animation: gallery-fade 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Primary CTA — gold plate, dark lettering */
+.btn-gold {
+  background: linear-gradient(
+    165deg,
+    #f2e8c4 0%,
+    #e4c04d 22%,
+    #d4af37 50%,
+    #b88a2a 100%
+  );
+  color: #1f1b16;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.08),
+    0 10px 36px var(--brand-shadow);
+  transition:
+    filter 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.15s ease;
+}
+
+.btn-gold:hover {
+  filter: brightness(1.06);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 14px 44px rgba(212, 175, 55, 0.22);
+}
+
+.btn-gold:active {
+  transform: translateY(1px);
+}
+
+.btn-gold:focus-visible {
+  outline: 2px solid var(--gold-secondary);
+  outline-offset: 3px;
+}
+
+/* Hero only — frosted light outline on imagery */
+.btn-hero-outline {
+  border: 2px solid rgba(248, 245, 239, 0.55);
+  background: rgba(31, 27, 22, 0.28);
+  color: #f8f5ef;
+  backdrop-filter: blur(10px);
+  transition:
+    border-color 0.22s ease,
+    background-color 0.22s ease,
+    color 0.22s ease;
+}
+
+.btn-hero-outline:hover {
+  border-color: rgba(212, 175, 55, 0.85);
+  background: rgba(212, 175, 55, 0.14);
+  color: #fff;
+}
+
+.btn-hero-outline:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: 3px;
+}
+
+/* Light sections — outline button */
+.btn-outline-light {
+  border: 2px solid rgba(212, 175, 55, 0.45);
+  background: transparent;
+  color: #1f1b16;
+  transition:
+    border-color 0.22s ease,
+    background-color 0.22s ease,
+    color 0.22s ease;
+}
+
+.btn-outline-light:hover {
+  border-color: var(--gold-secondary);
+  background: rgba(212, 175, 55, 0.07);
+  color: var(--gold-deep);
+}
+
+.btn-outline-light:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(
+    105deg,
+    #c9a227 0%,
+    #d4af37 35%,
+    #e4c04d 55%,
+    #b88a2a 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card-light {
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  background: var(--bg-card);
+  box-shadow: 0 16px 44px -22px rgba(31, 27, 22, 0.12);
+}
+
+.card-light-hover:hover {
+  border-color: rgba(184, 138, 42, 0.28);
+  box-shadow: 0 22px 52px -20px rgba(31, 27, 22, 0.14);
+}
+
+/* Legacy alias for gradual migration */
+.card-warm {
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  background: var(--bg-card);
+  box-shadow: 0 16px 44px -22px rgba(31, 27, 22, 0.12);
+}
+
+.card-warm-hover:hover {
+  border-color: rgba(184, 138, 42, 0.28);
+  box-shadow: 0 22px 52px -20px rgba(31, 27, 22, 0.14);
+}
