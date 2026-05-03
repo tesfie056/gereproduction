@@ -52,11 +52,11 @@ export function ContactForm() {
         />
       </div>
       <button type="submit" className="btn-gold w-full rounded-xl py-3.5 text-base font-semibold">
-        Send message (demo — no server)
+        Send message
       </button>
       {sent ? (
         <p className="text-center text-sm text-[#b88a2a]" role="status">
-          Thanks — this form is front-end only. Call or email us to reach the team.
+          Thank you. For the quickest reply, call or email us using the contact details on the left.
         </p>
       ) : null}
     </form>

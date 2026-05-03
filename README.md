@@ -44,7 +44,7 @@ npm run preview
 
 **Replace project photos:** Add images under `public/projects/` and update `src` strings in `lib/gallery-items.ts`.
 
-**Video slide:** In `lib/gallery-items.ts`, set `src` on the video slide to an MP4 path (e.g. `/projects/demo.mp4`) or a YouTube **embed** URL (`https://www.youtube.com/embed/...`).
+**Video slide:** In `lib/gallery-items.ts`, set `src` on the video slide to an MP4 path (e.g. `/projects/walkthrough.mp4`) or a YouTube **embed** URL (`https://www.youtube.com/embed/...`).
 
 ## Project structure (high level)
 
@@ -53,7 +53,7 @@ npm run preview
 | `app/page.tsx` | Homepage sections |
 | `app/layout.tsx` | Root layout + SEO metadata |
 | `components/ProjectGallery.tsx` | Auto-advancing carousel (client) |
-| `components/ContactForm.tsx` | Front-end–only contact form |
+| `components/ContactForm.tsx` | Contact form (submit shows follow-up note) |
 | `lib/site-config.ts` | Company name, phone, email, service area |
 | `lib/gallery-items.ts` | Slider slides (easy to edit) |
 | `netlify.toml` | Netlify build + publish settings |

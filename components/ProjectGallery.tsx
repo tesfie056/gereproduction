@@ -66,7 +66,7 @@ export function ProjectGallery({ slides }: ProjectGalleryProps) {
           ) : (
             <div className="flex h-full min-h-full flex-col items-center justify-center gap-4 bg-gradient-to-b from-[#f8f5ef] to-[#f0ebe3] px-8 text-center">
               <div className="rounded-full border border-[#d4af37]/45 bg-white px-5 py-2 text-sm font-semibold uppercase tracking-wider text-[#b88a2a] shadow-sm">
-                Video placeholder
+                Project video
               </div>
               <p className="max-w-lg text-lg font-medium text-[#1f1b16]">{slide.title}</p>
               {slide.caption ? (

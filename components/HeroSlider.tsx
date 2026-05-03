@@ -35,7 +35,7 @@ export function HeroSlider({ slides }: HeroSliderProps) {
         className="relative flex h-[100dvh] min-h-[520px] w-full items-center justify-center bg-[#2a241c]"
         aria-label="Featured projects"
       >
-        <p className="text-white/70">Add slides in lib/hero-slides.ts</p>
+        <p className="text-white/70">Project photos coming soon.</p>
       </section>
     );
   }
